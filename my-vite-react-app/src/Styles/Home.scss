@@ -1,0 +1,102 @@
+@import './variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $background-color;
+}
+
+.home-content {
+  @include flex-center;
+  flex-direction: column;
+  height: 100vh;
+
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    button {
+      width: 15rem;
+      height: 16vh;
+      font-weight: bold;
+      font-size: $font-size;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: #11537d;
+      border: 2px solid #707070;
+      padding: $button-padding;
+      cursor: pointer;
+     
+
+      // Hover state
+      &:hover {
+        background-color: $hover-color;
+      }
+
+      // Mobile styles
+      @media (max-width: 1321px) {
+       max-width: 10rem;
+      }
+
+
+      @media (max-width: 800px) {
+        width: 6rem;
+        height: 12vh;
+        font-size: $font-size * 0.6;
+        padding: $button-padding * 0.8;
+      }
+
+      // Small mobile styles
+      @media (max-width: 480px) {
+        width: 3rem;
+        height: 10vh;
+        font-size: $font-size * 0.3;
+        padding: $button-padding * 0.6;
+      }
+    }
+
+    // Target specific buttons by ID
+    #top-left-button {
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    #top-right-button {
+      border-top-right-radius: $border-radius;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    #bottom-left-button {
+      border-bottom-left-radius: $border-radius;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    #bottom-right-button {
+      border-bottom-right-radius: $border-radius;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .button-filled {
+      color: white;
+    }
+
+    .button-empty {
+      color: #11537d;
+      background-color: #11537d;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+  }
+}

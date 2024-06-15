@@ -1,0 +1,14 @@
+$background-color: #202628;
+$hover-color: #002338;
+$button-padding: 10px;
+$button-margin: 5px;
+$border-radius: 50px;
+$font-size: 1.3rem;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}

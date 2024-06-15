@@ -1,0 +1,102 @@
+.receipt-number-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .receipt-number-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  
+    label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    .receipt-number-input {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      font-size: 1.5rem;
+      justify-content: center;
+    }
+  
+    .digit {
+      position: relative;
+      display: inline-block;
+      margin-right: 5px;
+  
+      .clear-digit-button {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background: none;
+        border: none;
+        font-size: 1rem;
+        color: red;
+        cursor: pointer;
+      }
+    }
+  
+    .number-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+  
+      button {
+        width: 90px;
+        height: 60px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: #11537d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+  
+        &:hover {
+          background-color: #0d3d5c;
+        }
+      }
+  
+      .search-button {
+        grid-column: span 3;
+        background-color: #4caf50;
+  
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+    }
+  }
+  
